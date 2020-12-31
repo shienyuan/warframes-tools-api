@@ -14,6 +14,11 @@ func main() {
 		log.Fatal(err)
 	}
 
+	log.Println("--------------------------")
+	log.Println(os.Getenv("DB"))
+	log.Println(os.Getenv("PORT"))
+	log.Println("--------------------------")
+
 	model.SetupDb()
 
 	r := gin.Default()

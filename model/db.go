@@ -21,7 +21,7 @@ var WarframePrimeCol *mongo.Collection
 
 func SetupDb() {
 	client, err := mongo.NewClient(options.Client().ApplyURI(
-		os.Getenv("dbAddress")))
+		os.Getenv("DB")))
 	if err != nil {
 		log.Fatal(err)
 	}

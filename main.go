@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"log"
+	"os"
 	"warframes-tools-api/controller"
 	"warframes-tools-api/model"
 )
@@ -21,5 +22,6 @@ func main() {
 
 	warframe.GET("", controller.GetWarframes)
 
-	log.Fatal(r.Run("localhost:8081")) // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	log.Fatal(r.Run(os.Getenv("PORT"))) // listen and serve on 0.0.0.0:8080 (
+	// for windows "localhost:8080")
 }

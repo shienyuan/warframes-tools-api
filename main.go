@@ -22,6 +22,6 @@ func main() {
 
 	warframe.GET("", controller.GetWarframes)
 
-	log.Fatal(r.Run(os.Getenv("PORT"))) // listen and serve on 0.0.0.0:8080 (
+	log.Fatal(r.Run(":" + os.Getenv("PORT"))) // listen and serve on 0.0.0.0:8080 (
 	// for windows "localhost:8080")
 }
